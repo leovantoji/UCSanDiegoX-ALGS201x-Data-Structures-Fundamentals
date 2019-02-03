@@ -18,3 +18,8 @@
     |PushBack(Key)|add to back||
     |Key TopBack()|return back item||
     |PopBack()|remove back item||
+    |Boolean Find(Key)|is key in list?||
+    |Erase(Key)|remove key from list||
+    |Boolean Empty()|is list empty?||
+    |AddBefore(Node, Key)|add key before node||
+    |AddAfter(Node, Key)|add key after node||
