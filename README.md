@@ -23,3 +23,14 @@
     |Boolean Empty()|is list empty?|*O(1)*|*O(1)*|
     |AddBefore(Node, Key)|add key before node|*O(n)*|*O(1)*|
     |AddAfter(Node, Key)|add key after node|*O(1)*|*O(1)*|
+- Stack: Abstract data type with the following operations:
+  - Function|Usage|Run time|
+    |---|---|---|
+    |Push(Key)|add key to collection|*O(1)*|
+    |Key Top()|return most recently-added key|*O(1)*|
+    |Key Pop()|remove and return most recently-added key|*O(1)*|
+    |Empty()|is stack empty?|*O(1)*|
+  - LIFO queues
+  - Stacks can be implemented with array or linked-list:
+    - Linked-list has a fixed amount of overhead (additional pointer for every new element).
+    - Maximum size for array, and no maximum size for linked-list.
