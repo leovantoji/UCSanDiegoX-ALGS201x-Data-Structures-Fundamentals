@@ -24,7 +24,8 @@
     |AddBefore(Node, Key)|add key before node|*O(n)*|*O(1)*|
     |AddAfter(Node, Key)|add key after node|*O(1)*|*O(1)*|
 - Stack: Abstract data type with the following operations:
-  - Function|Usage|Run time|
+
+    |Function|Usage|Run time|
     |---|---|---|
     |Push(Key)|add key to collection|*O(1)*|
     |Key Top()|return most recently-added key|*O(1)*|
