@@ -48,3 +48,12 @@
   - Implemented with array or linked list:
     - Linked List: Enqueue uses List.PushBack. Dequeue uses List.TopFront and List.PopFront. Empty uses List.Empty.
     - Array: To make sure read and write are separate and distint, at least one element can't be written to.
+- Tree is empty or a node with a key or a list of child trees.
+- Node:
+  - Key.
+  - Children: list of children nodes.
+  - Parent (Optional).
+- Binary Search Tree:
+  - At most 2 children for each node.
+  - The value of the root node is greater than or equal to all nodes of its left child.
+  - The value of the root node is less than or equal to all nodes of its right child.
