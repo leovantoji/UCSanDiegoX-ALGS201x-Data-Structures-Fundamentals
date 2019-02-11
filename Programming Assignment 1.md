@@ -8,6 +8,7 @@
 **Time Limits:**
 
 |Language|C|C++|Java|Python|JavaScript|Scala|
+|-|-|-|-|-|-|-|
 |Time (sec)|1|1|1|1|3|3|
 
 ```python
