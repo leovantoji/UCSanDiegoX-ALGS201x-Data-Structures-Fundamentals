@@ -57,3 +57,10 @@
   - At most 2 children for each node.
   - The value of the root node is greater than or equal to all nodes of its left child.
   - The value of the root node is less than or equal to all nodes of its right child.
+- Tree Traversal:
+  - Depth First Search (DFS):
+    - InOderTraversal: Left Node Right.
+    - PreOrderTraversal: Node Left Right.
+    - PostOrderTraversal: Left Right Node.
+  - Breadth First Search (BFS):
+    - LevelTraversal.
