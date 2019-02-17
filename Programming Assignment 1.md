@@ -12,7 +12,35 @@
 |Time (sec)|1|1|1|1|3|3|
 
 ```python
+from collections import namedtuple
 
+Bracket = namedtuple("Bracket", ["char", "position"])
+
+def are_matching(left, right):
+    return (left + right) in ["()", "[]", "{}"]
+
+def find_mismatch(text):
+    opening_brackets_stack = []
+    for i, next in enumerate(text):
+        if next in "([{":
+            # Process opening bracket
+            opening_brackets_stack.append(Bracket(char = next, position = (i+1)))
+
+        if next in ")]}":
+            # Process closing bracket
+            n = len(opening_brackets_stack)
+            
+            if n != 0 and are_matching(opening_brackets_stack[n-1].char, next):
+                opening_brackets_stack.pop(n-1)
+            else:    
+                return (i+1)
+    
+    n = len(opening_brackets_stack)
+    
+    if n == 0:
+        return 'Success'
+    else:
+        return opening_brackets_stack[n-1].position
 ```
 
 ### 1.2. Compute Tree Height
