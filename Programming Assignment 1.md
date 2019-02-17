@@ -56,7 +56,39 @@ def find_mismatch(text):
 |Time (sec)|1|1|6|3|3|3|
 
 ```python
+import queue
 
+class Node:
+    def __init__(self, index):
+        self.index = index
+        self.children = []
+    
+    def addChild(self, child):
+        self.children.append(child)
+    
+def compute_height(n, parents):
+    nodes = [Node(i) for i in range(n)]
+    
+    for i in range(n):
+        if parents[i] == -1:
+            root = nodes[i]
+        else:
+            nodes[parents[i]].addChild(nodes[i])
+    
+    q = queue.Queue()
+    q.put(root)
+    height = 0
+    
+    while (not q.empty()):
+        size = q.qsize()
+        if size > 0:
+            height += 1
+        for i in range(size):
+            item = q.get()
+            for i in item.children:
+                q.put(i)
+    
+    return height
 ```
 
 ### 1.3. Network packet processing simulation
