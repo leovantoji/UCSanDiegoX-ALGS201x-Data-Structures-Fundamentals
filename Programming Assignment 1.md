@@ -55,6 +55,7 @@ def find_mismatch(text):
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |Time (sec)|1|1|6|3|3|3|
 
+Method 1:
 ```python
 import queue
 
@@ -89,6 +90,37 @@ def compute_height(n, parents):
                 q.put(i)
     
     return height
+```
+
+Method 2:
+```python
+from collections import namedtuple
+
+Node = namedtuple("Node", ["key", "children"])
+    
+def compute_height(n, parents):
+    nodes = [Node(key = i, children = []) for i in range(n)]
+    
+    for i in range(n):
+        if parents[i] == -1:
+            root = nodes[i]
+        else:
+            nodes[parents[i]].children.append(nodes[i])
+    
+    def height(root):
+        if len(root.children) == 0:
+            return 0
+        
+        max_height = 1
+        
+        for child in root.children:
+            ht = height(child)
+            if ht > max_height:
+                max_height = ht
+    
+        return max_height + 1
+    
+    return height(root)
 ```
 
 ### 1.3. Network packet processing simulation
