@@ -136,5 +136,92 @@ def compute_height(n, parents):
 |Time (sec)|2|2|6|8|6|6|
 
 ```python
+# python3
+from collections import namedtuple
 
+Request = namedtuple("Request", ["arrived_at", "time_to_process"])
+Response = namedtuple("Response", ["was_dropped", "started_at"])
+
+class Buffer:
+    def __init__(self, size):
+        self.size = size
+        self.finish_time = []
+        
+    def process(self, request): 
+        # release finished packets
+        def findIndex(a,key):
+            if len(a) == 0:
+                return -1
+
+            left, right = 0, len(a) - 1
+
+            rValue = -1
+            while left <= right:        
+                mid = (left + right) // 2
+                if a[mid] > key:
+                    right = mid - 1
+                else:
+                    rValue = mid
+                    left = mid + 1
+
+            return rValue
+        
+        countPackets = findIndex(self.finish_time, request.arrived_at)
+        
+        if countPackets != -1:
+            self.size += (countPackets + 1)      
+            if countPackets == 0:
+                self.finish_time.pop(0)
+            else:
+                self.finish_time = self.finish_time[(countPackets+1):]
+        
+        # check if buffer is full or not
+        if self.size >= 1:
+            # store packet into buffer
+            self.size -= 1
+            # initiate request
+            self.request = request
+                
+            # identify latest packet's finish time
+            n = len(self.finish_time)
+            
+            if n == 0:
+                st = request.arrived_at
+            else:
+                st = max(self.finish_time[n-1], request.arrived_at)    
+            
+            ft = st + request.time_to_process
+            
+            # find where to add ft to make sure finish_time is in increasing order
+            i = findIndex(self.finish_time,ft)
+            if i == -1:
+                self.finish_time.insert(0,ft)
+            else:
+                self.finish_time.insert(i+1,ft)
+            
+            return Response(False, st)
+        
+        return Response(True, -1)
+
+def process_requests(requests, buffer):
+    responses = []
+    for request in requests:
+        responses.append(buffer.process(request))
+    return responses
+
+def main():
+    buffer_size, n_requests = map(int, input().split())
+    requests = []
+    for _ in range(n_requests):
+        arrived_at, time_to_process = map(int, input().split())
+        requests.append(Request(arrived_at, time_to_process))
+
+    buffer = Buffer(buffer_size)
+    responses = process_requests(requests, buffer)
+
+    for response in responses:
+        print(response.started_at if not response.was_dropped else -1)
+
+if __name__ == "__main__":
+    main()
 ```
