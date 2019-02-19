@@ -64,3 +64,9 @@
     - PostOrderTraversal: Left Right Node.
   - Breadth First Search (BFS):
     - LevelTraversal.
+- Dynamic Array (Resizable Array):
+  - Store a pointer to a dynamically allocated array, and replace it with a newly-allocated array as needed.
+  - Abstract data type with the following operations (at a minimum):
+    - Get(*i*): retuns element at location *i*.
+    - Set(*i,val*): sets element *i* to *val*.
+    - PushBack(*val*): adds *val* to the end of the array.
