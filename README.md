@@ -85,5 +85,5 @@
     - Use the tokens to pay for the expensive operations.
   - Physicist's method:
     - Define a potential function, which maps states of the data structures to integers.
-    - Amortised cost for operation *t* is sum of the true cost and the change in potential.
+    - Amortised cost *c<sub>t</sub>* (for operation *t*) is sum of the true cost and the change in potential.
     - Choose the potential function such that if *c<sub>t</sub>* is small, the potential increases, and if *c<sub>t</sub>* is large, the potential decreases by the same scale.
