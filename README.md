@@ -67,6 +67,12 @@
 - Dynamic Array (Resizable Array):
   - Store a pointer to a dynamically allocated array, and replace it with a newly-allocated array as needed.
   - Abstract data type with the following operations (at a minimum):
-    - Get(*i*): retuns element at location *i*.
-    - Set(*i,val*): sets element *i* to *val*.
-    - PushBack(*val*): adds *val* to the end of the array.
+  
+    |Function|Usage|Run time|
+    |---|---|---|
+    |Get(*i*)|return element at location *i*|*O(1)*|
+    |Set(*i,val*)|set element *i* to *val*|*O(1)*|
+    |PushBack(*val*)|add *val* to the end|*O(n)*|
+    |Remove(*i*)|remove element *i*|*O(n)*|
+    |Size()|return size of the array|*O(1)*|
+    
