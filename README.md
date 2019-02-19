@@ -11,7 +11,7 @@
   - List API:
   
     |Function|Usage|Run time (Singly-liked list)|Run time (Doubly-liked list)|
-    |---|---|-c-|-c-|
+    |---|---|:---:|:---:|
     |PushFront(key)|add to front|*O(1)*|*O(1)*|
     |Key TopFront()|return front item|*O(1)*|*O(1)*|
     |PopFront()|remove front item|*O(1)*|*O(1)*|
@@ -27,7 +27,7 @@
   - Abstract data type with the following operations:
 
     |Function|Usage|Run time|
-    |---|---|-c-|
+    |---|---|:---:|
     |Push(Key)|add key to collection|*O(1)*|
     |Key Top()|return most recently-added key|*O(1)*|
     |Key Pop()|remove and return most recently-added key|*O(1)*|
@@ -40,7 +40,7 @@
   - Abstract data type with the following operations:
   
     |Function|Usage|Run time|
-    |---|---|---|
+    |---|---|:---:|
     |Enqueue(Key)|add key to collection|*O(1)*|
     |Key Dequeue()|return least recently-added key|*O(1)*|
     |Boolean Empty()|is queue empty?|*O(1)*|
@@ -69,7 +69,7 @@
   - Abstract data type with the following operations (at a minimum):
   
     |Function|Usage|Run time|
-    |---|---|---|
+    |---|---|:---:|
     |Get(*i*)|return element at location *i*|*O(1)*|
     |Set(*i,val*)|set element *i* to *val*|*O(1)*|
     |PushBack(*val*)|add *val* to the end|*O(n)*|
