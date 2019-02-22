@@ -101,3 +101,7 @@
     - C++: priority_queue
     - Java: PriorityQueue
     - Python: heapq
+  - Naive implementation:
+    - Unsorted Array/Doubly-linked List: *O(1)* for Insert(e), *O(n)* for ExtractMax().
+    - Sorted Array: *O(n)* for Insert(e), *O(1)* for ExtractMax().
+    - Sorted List: *O(n)* for Insert(e), *O(1)* for ExtractMax().
