@@ -87,3 +87,17 @@
     - Define a potential function, which maps states of the data structures to integers.
     - Amortised cost *c<sub>t</sub>* (for operation *t*) is sum of the true cost and the change in potential.
     - Choose the potential function such that if *c<sub>t</sub>* is small, the potential increases, and if *c<sub>t</sub>* is large, the potential decreases by the same scale.
+- Priority Queue:
+  - Abstract data type with the following operations:
+  
+    |Function|Usage|
+    |---|---|
+    |Insert(*p*)|add a new element with priority *p*|
+    |ExtractMax()|extract an element with maximum priority|
+    |Remove(*it*)|remove an element pointed by an iterator *it*|
+    |GetMax()|return an element with maximum priority w/o changing the set of elements|
+    |ChangePriority(*it*,*p*)|change the priority of an element pointed by *it* to *p*|    
+  - Built-in implementations:
+    - C++: priority_queue
+    - Java: PriorityQueue
+    - Python: heapq
