@@ -6,7 +6,7 @@ Array:
 - Constant time access to any element.
 - *O(n)* time to add/remove at any arbitrary location.
 - *O(1)* time to add/remove at the end of the array.
-
+\
 Linked List:
 - Node contains key and next pointer.
 - List API:
@@ -24,7 +24,7 @@ Linked List:
   |Boolean Empty()|is list empty?|*O(1)*|*O(1)*|
   |AddBefore(Node, Key)|add key before node|*O(n)*|*O(1)*|
   |AddAfter(Node, Key)|add key after node|*O(1)*|*O(1)*|
-
+\
 Stack: 
 - Abstract data type with the following operations:
 
@@ -38,7 +38,7 @@ Stack:
 - Implemented with array or linked-list:
   - Linked-list has a fixed amount of overhead (additional pointer for every new element).
   - Maximum size for array, and no maximum size for linked-list.
-
+\
 Queue:
 - Abstract data type with the following operations:
   
@@ -51,7 +51,7 @@ Queue:
 - Implemented with array or linked list:
   - Linked List: Enqueue uses List.PushBack. Dequeue uses List.TopFront and List.PopFront. Empty uses List.Empty.
   - Array: To make sure read and write are separate and distint, at least one element can't be written to.
-
+\
 Tree is empty or a node with a key or a list of child trees.
 - Node:
   - Key.
@@ -68,7 +68,7 @@ Tree is empty or a node with a key or a list of child trees.
     - PostOrderTraversal: Left Right Node.
   - Breadth First Search (BFS):
     - LevelTraversal.
-
+\
 Dynamic Array (Resizable Array):
 - Store a pointer to a dynamically allocated array, and replace it with a newly-allocated array as needed.
 - Abstract data type with the following operations (at a minimum):
@@ -92,7 +92,7 @@ Dynamic Array (Resizable Array):
     - Define a potential function, which maps states of the data structures to integers.
     - Amortised cost *c<sub>t</sub>* (for operation *t*) is sum of the true cost and the change in potential.
     - Choose the potential function such that if *c<sub>t</sub>* is small, the potential increases, and if *c<sub>t</sub>* is large, the potential decreases by the same scale.
-
+\
 Priority Queue:
 - Abstract data type with the following operations:
   
