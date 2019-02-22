@@ -112,3 +112,6 @@
   - Unsorted Array/Doubly-linked List: *O(1)* for Insert(e), *O(n)* for ExtractMax().
   - Sorted Array: *O(n)* for Insert(e), *O(1)* for ExtractMax().
   - Sorted List: *O(n)* for Insert(e), *O(1)* for ExtractMax().
+
+### Binary max-heap:
+- Binary tree (each node has zero, one, or two children) where the value of each node is at least the value of its children.
