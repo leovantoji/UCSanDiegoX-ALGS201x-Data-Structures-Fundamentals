@@ -6,7 +6,7 @@ Array:
 - Constant time access to any element.
 - *O(n)* time to add/remove at any arbitrary location.
 - *O(1)* time to add/remove at the end of the array.
-\
+\n
 Linked List:
 - Node contains key and next pointer.
 - List API:
